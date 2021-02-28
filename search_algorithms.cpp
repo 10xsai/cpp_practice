@@ -31,13 +31,14 @@ int binary_search(int *arr, int n, int x)
 
 int main()
 {
-    int n, x;
+    int n;
     cin >> n;
     int arr[n];
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
+    int x;
     cin >> x;
     cout << binary_search(arr, n, x);
     return 0;
