@@ -11,7 +11,7 @@ using namespace std;
 int number1 , number2 ;
 int sum=0 , prod , division , diff , permu1=1, permu2=1;
 
-void INPUT(); void SUM(); void DIFF();  void PROD(); void DIV(); void PERM(); void DIVIS();
+void INPUT(); void SUM(); void DIFF();  void PROD(); void DIV(); void PERM(); void DIVIS(); void FACT();
 
 
 
@@ -40,16 +40,10 @@ void PROD()
 
 void DIV()
 {
- if(number1<number2)
- {
-	 division=number2/number1;
-	 cout<<"Division of "<<" "<<number2<<" "<<"by"<<" "<<number1<<" "<<"is :" <<division<<endl;
- }
- else
- {
-   division=number1/number2;
-	 cout<<"Division of "<<" "<<number1<<" "<<"by"<<" "<<number2<<" "<<"is :" <<division<<endl;
- }
+
+   division=(max(number1 , number2))/(min(number1 , number2));
+   cout<<"Division of the numbers is :" <<division<<endl;
+ 
 }
 
 void PERM()
@@ -59,7 +53,12 @@ void PERM()
 	  permu1=permu1*i;
   }
   cout<<"Permutaion of "<<" "<<number1<<" "<<" is "<<" "<<permu1<<endl;
- for(int i =number2; i>0 ;i--)
+ 
+}
+
+void FACT()
+{
+for(int i =number2; i>0 ;i--)
   {
 	  permu2=permu2*i;
   }
@@ -110,6 +109,7 @@ int main()
 	 PROD();
 	 DIV();
 	 PERM();
+	 FACT();
 	 DIVIS();
 	}
 	}
