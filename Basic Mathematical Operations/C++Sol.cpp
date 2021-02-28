@@ -29,21 +29,12 @@ void SUM()
 
 void DIFF()
 {
- if(number1<number2)
- {
-	 diff=number2-number1;
-	 cout<<"Difference of "<<" "<<number2<<" "<<"and"<<" "<<number1<<" "<<"is :" <<diff<<endl;
- }
- else
- {
-   diff=number1-number2;
-	 cout<<"Difference of "<<" "<<number1<<" "<<"and"<<" "<<number2<<" "<<"is :" <<diff<<endl;
- }
+	 diff=number1-number2;
+	 cout<<"Absolute Difference of "<<" "<<number1<<" "<<"and"<<" "<<number2<<" "<<"is :" <<abs(diff)<<endl;
 }
 void PROD()
 {
 	prod=number1*number2;
-	diff=number2-number1;
 	 cout<<"Product of "<<" "<<number1<<" "<<"and"<<" "<<number2<<" "<<"is :" <<prod<<endl;
 }
 
