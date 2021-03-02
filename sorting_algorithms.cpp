@@ -4,6 +4,7 @@ using namespace std;
 
 void selection_sort(int *arr, int n);
 void bubble_sort(int *arr, int n);
+void insertion_sort(int *arr, int n);
 void merge_sort(int *arr, int l, int r);
 void merge(int *arr, int l, int mid, int r);
 
@@ -38,6 +39,21 @@ void bubble_sort(int *arr, int n)
         }
         if (!flag)
             break;
+    }
+}
+
+void insertion_sort(int *arr, int n)
+{
+    for (int i = 1; i < n; i++)
+    {
+        int j = i - 1;
+        int curr = arr[i];
+        while (arr[j] > curr && j >= 0)
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = curr;
     }
 }
 
@@ -105,7 +121,7 @@ int main()
     {
         cin >> arr[i];
     }
-    merge_sort(arr, 0, n - 1);
+    insertion_sort(arr, n);
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
